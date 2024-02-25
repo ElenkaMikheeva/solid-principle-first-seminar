@@ -1,12 +1,12 @@
 package lsp1.shape;
 
-public class Rectangle {
+public class Rectangle implements Shape {
     private int sideA;
     private int sideB;
 
     public Rectangle(int sideA, int sideB) {
-        this.setSideA(sideA);
-        this.setSideB(sideB);
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     public int getSideA() {
@@ -25,7 +25,12 @@ public class Rectangle {
         this.sideB = sideB;
     }
 
-    public int getArea() {
+    public int area() {
         return sideA * sideB;
+    }
+
+    @Override
+    public String toString() {
+        return "Прямоугольник со сторонами " + sideA + " и " + sideB;
     }
 }

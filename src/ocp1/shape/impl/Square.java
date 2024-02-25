@@ -8,7 +8,8 @@ public class Square  implements Shape {
         this.side = side;
     }
 
-    public int getSide() {
-        return side;
+    @Override
+    public double area() {
+        return Math.pow(side, 2);
     }
 }
