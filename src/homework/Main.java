@@ -2,8 +2,10 @@ package homework;
 
 public class Main{
     public static void main(String[] args){
-        User user = new User("Bob");
-        user.report();
-        user.save();
+        Man man = new User("Bob");
+        Reporter reporter = new ReporterToScreen();
+        reporter.report(man);
+        Saver saver = new SaverToScreen();
+        saver.save(man);
     }
 }
